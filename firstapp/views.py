@@ -26,3 +26,16 @@ def insert(request):
         p = Person(name='name', age= 10)
         p.save()
     return HttpResponse('완료')
+
+def template(request):
+    word = ['python', 'c', 'java', 'html']
+    tuple = ('c++', 'c#', 'delphi', 'css')
+    age = 100
+    return render(
+        request,
+        'firstapp/template.html',
+        {
+            'word': word, 'tuple':tuple,
+            'age' : age
+        }
+    )
