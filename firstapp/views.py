@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Curriculum
+from .models import Curriculum, Person
 
 def index1(request):
     return HttpResponse('<h1>Hello</h1>')
@@ -20,3 +20,9 @@ def show(request):
     # return HttpResponse(html)
     #             request   template              model
     return render(request, 'firstapp/show.html', {'curriculum':curriculum})
+
+def insert(request):
+    for i in range(1000):
+        p = Person(name='name', age= 10)
+        p.save()
+    return HttpResponse('완료')

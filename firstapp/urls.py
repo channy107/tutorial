@@ -4,6 +4,8 @@ from .views import *
 
 urlpatterns = [
     path('main/', main, name='main'),
-    path('show/', show)
+    path('show/', show),
+    path('insert', insert),
     # ctrl + d 한줄복사
+
 ]
