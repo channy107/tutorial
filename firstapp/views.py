@@ -39,3 +39,9 @@ def template(request):
             'age' : age
         }
     )
+
+def ex1(request):
+    return render(request, 'firstapp/ex1.html', {})
+
+def ex2(request):
+    return render(request, 'firstapp/ex2.html', {})
